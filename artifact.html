@@ -1,0 +1,322 @@
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>NŌ·METHOD Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: cream editorial landing, hero photo band, pill buttons, rounded white cards on alternating cream bands */
+:root{
+  --bg:#f1ebe1; --bg-alt:#e8e0d1; --surface:#ffffff;
+  --ink:#2a271f; --ink-soft:#6b6557; --line:#ddd2ba;
+  --accent:#8a6a4f; --accent-ink:#ffffff;
+  --serif:'Fraunces',Georgia,serif; --sans:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#1d1b17; --bg-alt:#252219; --surface:#28251d;
+    --ink:#f1ece0; --ink-soft:#b9b19d; --line:#3a3528;
+    --accent:#c9a27c; --accent-ink:#1d1b17;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1d1b17; --bg-alt:#252219; --surface:#28251d;
+  --ink:#f1ece0; --ink-soft:#b9b19d; --line:#3a3528;
+  --accent:#c9a27c; --accent-ink:#1d1b17;
+  color-scheme: dark;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.55}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.12;text-wrap:balance;margin:0}
+p{margin:0}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.center{text-align:center}
+
+/* header */
+.hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:color-mix(in srgb, var(--bg) 92%, transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.hdr-row{display:flex;align-items:center;justify-content:space-between;padding-block:16px;gap:16px;flex-wrap:wrap}
+.brand{font-family:var(--serif);font-weight:600;font-size:1.05rem;letter-spacing:.14em}
+.brand small{display:block;font-family:var(--sans);font-weight:500;font-size:.56rem;letter-spacing:.14em;color:var(--ink-soft);margin-top:3px}
+.nav{display:flex;gap:22px;font-size:.85rem;font-weight:500;flex-wrap:wrap}
+.nav a:hover{color:var(--accent)}
+
+.btn{display:inline-block;padding:13px 26px;border-radius:999px;font-weight:600;font-size:.86rem;border:1px solid transparent;transition:opacity .15s}
+.btn:hover{opacity:.82}
+.btn-solid{background:var(--ink);color:var(--bg)}
+.btn-line{border-color:var(--ink)}
+
+/* hero */
+.hero{position:relative;padding-block:72px 48px;overflow:hidden}
+.hero-art{position:absolute;inset:0;background:
+  radial-gradient(circle at 18% 20%, color-mix(in srgb, var(--accent) 35%, transparent), transparent 55%),
+  linear-gradient(135deg, var(--bg-alt), var(--bg));
+  opacity:.9}
+.hero-in{position:relative;display:grid;gap:18px;max-width:640px}
+.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;font-weight:600;color:var(--accent)}
+.hero h1{font-size:clamp(2.1rem,5.5vw,3.4rem)}
+.hero p.lede{color:var(--ink-soft);max-width:520px;font-size:1.02rem}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:4px}
+.stats{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:52px}
+.stat b{display:block;font-family:var(--serif);font-size:1.7rem;font-weight:600}
+.stat span{display:block;font-weight:600;font-size:.85rem;margin-top:2px}
+.stat small{display:block;color:var(--ink-soft);font-size:.74rem;margin-top:1px}
+
+/* sections */
+.sec{padding-block:72px}
+.sec.alt{background:var(--bg-alt)}
+.sec h2{font-size:clamp(1.6rem,3.2vw,2.2rem);margin-bottom:10px}
+.lead{color:var(--ink-soft);max-width:520px;margin-bottom:38px;font-size:1rem}
+
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:30px 26px}
+.card .num{font-family:var(--serif);font-size:1.7rem;color:var(--line);display:block;margin-bottom:16px}
+.card h3{font-size:1.1rem;margin-bottom:8px}
+.card p{color:var(--ink-soft);font-size:.92rem}
+
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:6px}
+.team-ph{aspect-ratio:1;border-radius:20px;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:1.7rem;color:var(--accent-ink);background:linear-gradient(145deg,var(--accent),color-mix(in srgb,var(--accent) 60%, var(--ink)));margin-bottom:12px}
+.team h3{font-size:1.02rem;text-align:center}
+
+.svc{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.svc-card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:30px;position:relative;display:flex;flex-direction:column;gap:14px}
+.svc-card h3{font-size:1.1rem}
+.svc-card>p{color:var(--ink-soft);font-size:.92rem}
+.svc-card ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.svc-card li{padding-left:18px;position:relative;color:var(--ink-soft);font-size:.86rem}
+.svc-card li::before{content:"—";position:absolute;left:0;color:var(--ink)}
+.tag{position:absolute;top:26px;right:26px;background:var(--bg-alt);border:1px solid var(--line);padding:3px 12px;border-radius:999px;font-size:.7rem;font-weight:600}
+
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.ph{aspect-ratio:4/3;border-radius:16px;background:linear-gradient(150deg,var(--bg-alt),var(--line));display:flex;align-items:center;justify-content:center;color:var(--ink-soft);font-size:.74rem;text-align:center;padding:10px}
+
+blockquote.testi{font-family:var(--serif);font-size:1.3rem;max-width:640px;margin:0}
+blockquote.testi footer{margin-top:18px;font-family:var(--sans);font-weight:600;font-size:.9rem}
+blockquote.testi footer span{font-weight:400;color:var(--ink-soft)}
+
+.ig-handle{display:inline-block;font-weight:600;border-bottom:1px solid var(--ink);margin-bottom:26px}
+.ig-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.ig-cell{aspect-ratio:1;background:var(--surface);border:1px solid var(--line);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:.64rem;color:var(--ink-soft)}
+
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.info h4{text-transform:uppercase;letter-spacing:.08em;font-size:.7rem;font-weight:600;color:var(--ink-soft);margin-bottom:8px}
+
+.faq{max-width:680px;display:grid;gap:0}
+.faq details{border-bottom:1px solid var(--line);padding-block:18px}
+.faq summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--serif);font-size:1.2rem;color:var(--accent)}
+.faq details[open] summary::after{content:"–"}
+.faq p{margin-top:12px;color:var(--ink-soft);font-size:.92rem}
+
+.wa-box{margin-top:40px;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:34px}
+.wa-box h3{font-size:1.2rem;margin-bottom:8px}
+.wa-box p{color:var(--ink-soft);margin-bottom:18px;max-width:480px;font-size:.92rem}
+.copytxt{font-weight:600;font-family:var(--serif)}
+
+.ftr{background:var(--ink);color:color-mix(in srgb, var(--bg) 85%, transparent)}
+.ftr-in{padding-block:56px 20px;display:grid;grid-template-columns:2fr 1fr 1fr;gap:34px}
+.ftr h4{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px;color:var(--bg)}
+.ftr p{font-size:.86rem;margin-bottom:6px}
+.ftr .brand{color:var(--bg);margin-bottom:12px}
+.ftr .brand small{color:color-mix(in srgb, var(--bg) 70%, transparent)}
+.copy{text-align:center;padding-top:36px;font-size:.72rem;color:color-mix(in srgb, var(--bg) 55%, transparent)}
+
+@media(max-width:780px){
+  .nav{display:none}
+  .grid3,.svc,.team,.gallery,.info,.ftr-in{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .ig-grid{grid-template-columns:repeat(3,1fr)}
+}
+</style>
+
+<header class="hdr">
+  <div class="wrap hdr-row">
+    <div class="brand">NŌ · METHOD<small>ENTRENAMIENTO PERSONAL · SALUD · MOVIMIENTO</small></div>
+    <nav class="nav">
+      <a href="#inicio">Inicio</a><a href="#equipo">Equipo</a><a href="#servicios">Servicios</a><a href="#estudio">Estudio</a><a href="#contacto">Contacto</a>
+    </nav>
+    <a href="#contacto" class="btn btn-solid">Reservar</a>
+  </div>
+</header>
+
+<main>
+  <section id="inicio" class="hero">
+    <div class="hero-art"></div>
+    <div class="wrap hero-in">
+      <p class="eyebrow">Entrenamiento personal · Rivas-Vaciamadrid</p>
+      <h1>Entrenamiento personal, salud y movimiento.</h1>
+      <p class="lede">Un espacio diseñado para ayudarte a sentirte más fuerte, moverte mejor y cuidar de tu cuerpo a través de un entrenamiento adaptado a ti, basado en la ciencia y guiado por profesionales.</p>
+      <div class="hero-actions">
+        <a href="#contacto" class="btn btn-solid">Reserva tu primera sesión</a>
+        <a href="#servicios" class="btn btn-line">Ver servicios</a>
+      </div>
+    </div>
+    <div class="wrap stats">
+      <div class="stat"><b>100%</b><span>Personalizado</span><small>Cada plan es único</small></div>
+      <div class="stat"><b>1:1</b><span>Atención dedicada</span><small>Enfoque en ti</small></div>
+      <div class="stat"><b>3</b><span>Entrenadores</span><small>Equipo profesional</small></div>
+      <div class="stat"><b>4</b><span>Modalidades</span><small>Presencial y online</small></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <h2>Más que entrenar</h2>
+      <p class="lead">Un enfoque integral para sentirte fuerte, con energía y en control.</p>
+      <div class="grid3">
+        <div class="card"><span class="num">01</span><h3>Personalizado</h3><p>No hay plantillas. Tu entrenamiento se adapta a tu cuerpo, tu historia y tus objetivos — hoy y mañana.</p></div>
+        <div class="card"><span class="num">02</span><h3>Salud integral</h3><p>Trabajamos fuerza, movilidad y hábitos con una mirada holística. Sentirte bien va más allá del gimnasio.</p></div>
+        <div class="card"><span class="num">03</span><h3>Movimiento con sentido</h3><p>Entrenar con propósito, sin presión ni comparaciones. Un espacio seguro donde avanzar a tu ritmo.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="equipo" class="sec alt center">
+    <div class="wrap">
+      <p class="eyebrow">Conoce al estudio</p>
+      <h2>El equipo</h2>
+      <p class="lead" style="margin-inline:auto">Nerea, Nacho y Álvaro. Tres profesionales que te acompañan para sentirte más fuerte, moverte mejor y cuidar de tu cuerpo.</p>
+      <div class="team">
+        <div><div class="team-ph">NE</div><h3>Nerea</h3></div>
+        <div><div class="team-ph">NA</div><h3>Nacho</h3></div>
+        <div><div class="team-ph">ÁL</div><h3>Álvaro</h3></div>
+      </div>
+      <div style="margin-top:32px"><a href="#contacto" class="btn btn-solid">Reserva tu primera sesión</a></div>
+    </div>
+  </section>
+
+  <section id="servicios" class="sec">
+    <div class="wrap">
+      <p class="eyebrow">Servicios</p>
+      <h2>Elige cómo quieres entrenar</h2>
+      <p class="lead">Cuatro modalidades para adaptarnos a ti:</p>
+      <div class="svc">
+        <div class="svc-card">
+          <h3>Entrenamiento personal individual</h3>
+          <p>Sesiones one-to-one totalmente adaptadas a tus objetivos, nivel y disponibilidad.</p>
+          <ul><li>1, 2 o 3 días por semana</li><li>Planificación personalizada</li><li>Seguimiento de progreso</li><li>Ambiente íntimo y sin agobios</li></ul>
+          <a href="#contacto" class="btn btn-line" style="align-self:start">Consultar disponibilidad</a>
+        </div>
+        <div class="svc-card">
+          <h3>Entrenamiento dúo</h3>
+          <p>Entrena con un amigo, pareja o familiar. Misma calidad personalizada, en compañía.</p>
+          <ul><li>2 personas por sesión</li><li>1, 2 o 3 días por semana</li><li>Plan compartido, atención individual</li><li>Ideal para mantener la motivación</li></ul>
+          <a href="#contacto" class="btn btn-line" style="align-self:start">Consultar disponibilidad</a>
+        </div>
+        <div class="svc-card">
+          <h3>Grupos reducidos</h3>
+          <p>La energía de entrenar en grupo con la atención que mereces. Máximo 4–5 personas.</p>
+          <ul><li>Grupos de 4–5 personas</li><li>2 o 3 días por semana</li><li>Ambiente cercano y motivador</li><li>Ejercicios adaptados a cada nivel</li></ul>
+          <a href="#contacto" class="btn btn-line" style="align-self:start">Consultar disponibilidad</a>
+        </div>
+        <div class="svc-card">
+          <span class="tag">Flexible</span>
+          <h3>Online Premium</h3>
+          <p>Para cuando no puedes venir al estudio pero quieres seguir avanzando con guía profesional.</p>
+          <ul><li>Planificación mensual personalizada</li><li>Seguimiento semanal</li><li>Comunicación directa con el equipo</li><li>Flexibilidad total de horario</li></ul>
+          <a href="#contacto" class="btn btn-line" style="align-self:start">Consultar disponibilidad</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="estudio" class="sec alt">
+    <div class="wrap">
+      <p class="eyebrow">Espacio</p>
+      <h2>El estudio</h2>
+      <p class="lead">Un espacio diseñado para entrenar con calma, calidad y atención.</p>
+      <div class="gallery">
+        <div class="ph">Foto: vista general del estudio</div>
+        <div class="ph">Foto: zona funcional</div>
+        <div class="ph">Foto: detalle de entrenamiento</div>
+        <div class="ph">Foto: ambiente boutique</div>
+        <div class="ph">Foto: bienestar y movimiento</div>
+        <div class="ph">Foto: entrenamiento personalizado</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <p class="eyebrow">Testimonios</p>
+      <h2>Lo que dicen</h2>
+      <p class="lead">Experiencias reales de quienes entrenan con el equipo.</p>
+      <blockquote class="testi">
+        <p>"Llevaba años sin moverme con regularidad. Me han ayudado a retomar el ejercicio sin miedo ni presión. Salgo del estudio con energía y ganas de volver."</p>
+        <footer>María G. <span>· Cliente desde 2024</span></footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="sec alt center">
+    <div class="wrap">
+      <p class="eyebrow">Instagram</p>
+      <h2>Comunidad</h2>
+      <p class="lead" style="margin-inline:auto">Síguenos en Instagram y descubre el día a día del estudio.</p>
+      <a href="#" class="ig-handle">@nomethod.studio</a>
+      <div class="ig-grid">
+        <div class="ig-cell">Próx.</div><div class="ig-cell">Próx.</div><div class="ig-cell">Próx.</div>
+        <div class="ig-cell">Próx.</div><div class="ig-cell">Próx.</div><div class="ig-cell">Próx.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <p class="eyebrow">Ubicación</p>
+      <h2>Entrena en Rivas-Vaciamadrid</h2>
+      <p class="lead">Un estudio boutique en el corazón de Rivas. Fácil acceso y aparcamiento cercano.</p>
+      <div class="info">
+        <div><h4>Dirección</h4><p>Pendiente de confirmar, Rivas-Vaciamadrid, Madrid</p></div>
+        <div><h4>Teléfono</h4><p>Pendiente</p></div>
+        <div><h4>Horario</h4><p>Lunes – Viernes 7:00–21:00<br>Sábados y domingos cerrado</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec alt">
+    <div class="wrap">
+      <p class="eyebrow">FAQ</p>
+      <h2>Preguntas frecuentes</h2>
+      <div class="faq">
+        <details open><summary>¿Cómo son las sesiones?</summary><p>Cada sesión es personalizada y dura aproximadamente una hora. Trabajamos fuerza, movilidad y acondicionamiento según tus objetivos. El ritmo lo marcas tú.</p></details>
+        <details><summary>¿Puedo empezar aunque lleve tiempo sin entrenar?</summary><p>Sí, el plan se adapta a tu punto de partida, sea cual sea.</p></details>
+        <details><summary>¿Hay opción online?</summary><p>Sí, con la modalidad Online Premium y seguimiento semanal.</p></details>
+        <details><summary>¿Cuántas personas hay por sesión?</summary><p>Depende de la modalidad: individual, dúo, o grupos reducidos de 4–5 personas.</p></details>
+        <details><summary>¿Cómo reservo la primera sesión?</summary><p>Escríbenos por WhatsApp y te respondemos para conocerte y agendar sin compromiso.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="sec">
+    <div class="wrap">
+      <p class="eyebrow">Contacto</p>
+      <h2>Reserva tu primera sesión</h2>
+      <p class="lead">Escríbenos por WhatsApp. Te respondemos para conocerte, resolver dudas y agendar tu primera sesión sin compromiso.</p>
+      <div class="info">
+        <div><h4>Teléfono</h4><p class="copytxt">Pendiente</p></div>
+        <div><h4>Email</h4><p class="copytxt">pendiente@nomethod.studio</p></div>
+        <div><h4>Instagram</h4><p class="copytxt">@nomethod.studio</p></div>
+      </div>
+      <div class="wa-box">
+        <h3>WhatsApp</h3>
+        <p>El camino más rápido para reservar. Escríbenos y te respondemos personalmente.</p>
+        <a href="#" class="btn btn-solid">Escribir por WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap ftr-in">
+    <div>
+      <div class="brand">NŌ · METHOD<small>ENTRENAMIENTO PERSONAL · SALUD · MOVIMIENTO</small></div>
+      <p style="max-width:320px;margin-top:14px">Estudio boutique de entrenamiento personal en Rivas-Vaciamadrid.</p>
+    </div>
+    <div><h4>Contacto</h4><p>Teléfono pendiente</p><p>pendiente@nomethod.studio</p><p>@nomethod.studio</p></div>
+    <div><h4>Legal</h4><p><a href="#">Aviso legal</a></p><p><a href="#">Política de privacidad</a></p><p><a href="#">Política de cookies</a></p></div>
+  </div>
+  <p class="copy">© 2026 NŌ·METHOD. Todos los derechos reservados.</p>
+</footer>
