@@ -206,8 +206,9 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* GALLERY */
-.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.gallery img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--radius-md); background: #ccc; }
+.gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.gallery img { width: 100%; height: 440px; object-fit: cover; border-radius: var(--radius-md); background: #ccc; }
+.gallery .wide { grid-column: span 2; }
 
 /* TESTIMONIAL */
 .testimonial {
@@ -294,6 +295,8 @@ a { color: inherit; text-decoration: none; }
   .nav-toggle { display: block; }
   .cards-3, .services-grid, .team-grid, .info-grid, .contact-grid, .gallery { grid-template-columns: 1fr; }
   .hero-stats { grid-template-columns: repeat(2, 1fr); }
+  .gallery img { height: auto; aspect-ratio: 4/5; }
+  .gallery .wide { grid-column: auto; aspect-ratio: 4/3; }
   .ig-grid { grid-template-columns: repeat(3, 1fr); }
   .footer-inner { grid-template-columns: 1fr; }
 }

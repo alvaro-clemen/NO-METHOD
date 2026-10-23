@@ -13,7 +13,7 @@ Web estática (HTML/CSS/JS puro, sin frameworks) con el mismo estilo visual que 
 - Email real
 - Dirección completa
 - Enlace real de WhatsApp (sustituir el número `34600000000` en los botones "Reservar"/"WhatsApp")
-- Fotos reales en `images/` (hero.jpg + gallery-1.jpg a gallery-6.jpg)
+- Fotos reales en `images/` (portada: hero.webp; estudio: estudio-1.webp a estudio-3.webp)
 - Testimonios reales (puedes duplicar el bloque `.testimonial` en index.html para añadir más)
 
 ## Cómo probarlo en local
