@@ -250,6 +250,13 @@ a { color: inherit; text-decoration: none; }
 }
 .ig-cell span { font-size: 0.72rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; }
 .ig-cell:hover { transform: translateY(-3px); color: var(--ink); }
+.ig-photo { position: relative; overflow: hidden; padding: 0; color: var(--white); }
+.ig-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.ig-photo svg { position: relative; opacity: 0; transition: opacity .2s; }
+.ig-photo::after { content: ""; position: absolute; inset: 0; background: rgba(38,36,31,.35); opacity: 0; transition: opacity .2s; }
+.ig-photo:hover { color: var(--white); }
+.ig-photo:hover::after, .ig-photo:hover svg { opacity: 1; }
+.ig-photo svg { z-index: 1; }
 .ig-follow { display: inline-flex; align-items: center; gap: 10px; margin-top: 32px; }
 .contact-item a, .info-grid p a { color: inherit; }
 
