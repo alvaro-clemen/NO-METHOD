@@ -109,7 +109,7 @@ a { color: inherit; text-decoration: none; }
   background-size: cover;
   background-position: center 60%;
   background-color: #cfc8ba;
-  filter: blur(3px);
+  filter: blur(1.5px);
 }
 .hero-overlay {
   position: absolute;
@@ -140,6 +140,7 @@ a { color: inherit; text-decoration: none; }
   border-top: 1px solid rgba(38,36,31,0.18);
   color: var(--ink);
 }
+.stat { text-align: center; }
 .stat strong { display: block; font-family: var(--serif); font-size: 1.8rem; }
 .stat span { display: block; font-weight: 600; margin-top: 8px; }
 .stat small { display: block; color: var(--ink-soft); font-size: 0.8rem; margin-top: 4px; }
