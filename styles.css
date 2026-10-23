@@ -21,6 +21,9 @@ body {
   line-height: 1.5;
 }
 
+p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.center p, p.center { text-align: center; }
+
 h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.05; letter-spacing: -0.035em; }
 h3 { letter-spacing: -0.015em; line-height: 1.2; }
 
