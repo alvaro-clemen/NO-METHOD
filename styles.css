@@ -168,7 +168,8 @@ a { color: inherit; text-decoration: none; }
 .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 20px; }
 .team-card { text-align: center; }
 .team-photo {
-  aspect-ratio: 1;
+  aspect-ratio: 4/5;
+  overflow: hidden;
   border-radius: var(--radius-lg);
   background: linear-gradient(135deg, #ddd4c2, #c9bfa9);
   margin-bottom: 16px;
@@ -180,6 +181,7 @@ a { color: inherit; text-decoration: none; }
   color: var(--white);
 }
 .team-photo::before { content: attr(data-initials); }
+.team-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
 .team-card h3 { font-size: 1.15rem; }
 
 /* SERVICES */
