@@ -8,7 +8,7 @@
   --radius-lg: 28px;
   --radius-md: 18px;
   --radius-pill: 999px;
-  --serif: 'Playfair Display', Georgia, serif;
+  --serif: 'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
@@ -21,7 +21,8 @@ body {
   line-height: 1.5;
 }
 
-h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.05; letter-spacing: -0.035em; }
+h3 { letter-spacing: -0.015em; line-height: 1.2; }
 
 .container {
   max-width: 1140px;
