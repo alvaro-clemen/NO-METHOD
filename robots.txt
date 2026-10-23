@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://alvaro-clemen.github.io/NO-METHOD/sitemap.xml
+Sitemap: https://nomethodstudio.com/sitemap.xml
